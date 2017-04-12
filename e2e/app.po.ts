@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class WebdevkrsandAngularIntroPage {
+export class AppRootPage {
   navigateTo() {
     return browser.get('/');
   }

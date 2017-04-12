@@ -1,10 +1,10 @@
-import { WebdevkrsandAngularIntroPage } from './app.po';
+import { AppRootPage } from './app.po';
 
-describe('webdevkrsand-angular-intro App', () => {
-  let page: WebdevkrsandAngularIntroPage;
+describe('angular-cli-based-starter App', () => {
+  let page: AppRootPage;
 
   beforeEach(() => {
-    page = new WebdevkrsandAngularIntroPage();
+    page = new AppRootPage();
   });
 
   it('should display message saying app works', () => {
