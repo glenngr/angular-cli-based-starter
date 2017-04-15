@@ -5,9 +5,12 @@
   "scripts": {
     "ng": "ng",
     "start": "npm-run-all -p serve test",
+    "start:hmr": "npm-run-all -p serve:hmr test",
     "serve": "ng serve",
-    "build": "ng build",
     "serve:hmr": "ng serve --hmr -e=dev-hmr",
+    "prestart": "npm run sass",
+    "prebuild": "npm run sass",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
