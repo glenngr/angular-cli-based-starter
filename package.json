@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "npm-run-all -p serve test",
-    "start:hmr": "npm-run-all -p serve:hmr test",
+    "start": "npm-run-all -p serve test sass:watch",
+    "start:hmr": "npm-run-all -p serve:hmr test sass:watch",
     "serve": "ng serve",
     "serve:hmr": "ng serve --hmr -e=dev-hmr",
     "prestart": "npm run sass",
@@ -13,7 +13,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "sass": "node-sass src -o src --include-path node_modules --output-style compressed -q",
+    "sass:watch": "node-sass -w src -o src --include-path node_modules --output-style compressed -q"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +46,7 @@
     "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
